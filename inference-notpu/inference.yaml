@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: inference-pod
+  name: inference-notpu
   labels:
-    name: inference-pod
+    name: inference-notpu
 spec:
   containers:
   - name: inference
@@ -19,4 +19,4 @@ spec:
     hostPath:
       path: /data
       type: Directory
-  nodeName: rll-meta
+      #  nodeName: rll-meta
