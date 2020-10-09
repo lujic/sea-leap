@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inference-pod
+  labels:
+    name: inference-pod
+spec:
+  containers:
+  - name: inference
+    image: ilujic/inference-arm32v7:notpu-slim-buster
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 5000
+    volumeMounts:
+    - mountPath: /data
+      name: intrasafed-data
+  volumes:
+  - name: intrasafed-data
+    hostPath:
+      path: /data
+      type: Directory
+  nodeName: rll-meta

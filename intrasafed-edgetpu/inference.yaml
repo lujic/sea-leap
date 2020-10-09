@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inference-pod
+  labels:
+    name: inference-pod
+spec:
+  containers:
+  - name: inference
+    image: intrasafed-at-arm32v7-slim-buster:edgetpu
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 5000
+    volumeMounts:
+    - mountPath: /data
+      name: intrasafed-data
+    - mountPath: /dev/bus/usb
+      name: dev-bus
+    securityContext:
+      privileged: true
+  volumes:
+  - name: intrasafed-data
+    hostPath:
+      path: /data
+      type: Directory
+  - name: dev-bus
+    hostPath:
+      path: /dev/bus/usb
+      type: Directory
+  nodeName: rll-meta
