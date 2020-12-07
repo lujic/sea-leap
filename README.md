@@ -14,7 +14,7 @@ The simulation-based evaluation is based on real image datasets utilizing physic
 
 ## DATA
 The proposed algorithms are evaluated on different real-world datasets (typically used in computer vision analytics applications such as object detection and recognition), namely:
-* InTraSafEd 5G project (newsroom.magenta.at/2020/01/16/5g-anwendungen-in-wien/) for increasing traffic safety with Edge and 5G, obtained during the project evaluation. The datasets contain sampled video frames in various sizes from the chosen Vienna’s intersection used for the real-time detection of critical situations
+* InTraSafEd 5G project (https://newsroom.magenta.at/2020/01/16/5g-anwendungen-in-wien/) for increasing traffic safety with Edge and 5G, obtained during the project evaluation. The datasets contain sampled video frames in various sizes from the chosen Vienna’s intersection used for the real-time detection of critical situations
 and to support drivers in avoiding accidents (due to objects that can appear in drivers’ blind spots).
 * Dataset Penn-Fudan comes from an image database used for object detection and recognition on scenes around campus and urban streets around the University of Pennsylvania
 and Fudan University [1]. Selected frames represent various angles and image qualities of captured objects such as pedestrians, bikes and cars.
