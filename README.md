@@ -1,8 +1,8 @@
 # SEA-LEAP
 SEA-LEAP is a framework for Self-adaptive and Locality-aware Edge Analytics Placement. It includes: 
-(i) an agent-based mechanism for tracking data movements, on top of which a generic control mechanism is devised, featuring: 
-(iia) a meta-scheduler allowing a guided deployment of on-demand analytics applications to node locations storing required input datasets,
-(iib) a placement service enabling on-demand analytics placement to the most appropriate dataset location based on adaptive data movements that minimizes overall analytics requests execution time.
+1. an agent-based mechanism for tracking data movements, on top of which a generic control mechanism is devised, featuring: 
+2a. a meta-scheduler allowing a guided deployment of on-demand analytics applications to node locations storing required input datasets,
+2.b a placement service enabling on-demand analytics placement to the most appropriate dataset location based on adaptive data movements that minimizes overall analytics requests execution time.
 
 The current SEA-LEAP is developed in Python (requiring additional packages such as pandas, numpy, socket, psycopg2) and uses Kubernetes platform for the experimental evaluation. 
 
