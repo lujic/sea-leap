@@ -22,7 +22,7 @@ and Fudan University [1]. Selected frames represent various angles and image qua
 urban traffic surveillance [2].
 
 ## APPLICATION use case
-The analytics application runs a quantized version of SSD MobileNet v2 model, a lightweight and pre-trained convolutional neural network (CNN) based object detection. The object detection logic is dockerized, and (after starting) exposed (using Flask) as a service running in a container (that can be accessed using API http://localhost:5000/api/detect). Corresponding docker images are publicly available on the Docker hub repository (https://hub.docker.com/r/ilujic/inference-arm32v7/).
+The analytics application runs a quantized version of SSD MobileNet v2 model, a lightweight and pre-trained convolutional neural network (CNN) based object detection. The object detection logic is dockerized, and (after starting) exposed (using Flask) as a service running in a container (that can be accessed using API (http://localhost:5000/api/detect). Corresponding docker images are publicly available on the Docker hub repository (https://hub.docker.com/r/ilujic/inference-arm32v7/).
 
 *******************************************************************
 This repository includes the following elements/services:
