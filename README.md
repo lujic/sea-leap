@@ -28,7 +28,7 @@ The analytics application runs a quantized version of SSD MobileNet v2 model, a 
 This repository includes the following elements/services:
 
 - **inference-benchmark** - aims to obtain inference latency benchmarks for different (RPi) node types. 
-
+- **inference-docker** - contains source files to build docker images for the object detection logic. 
 
 *******************************************************************
 
