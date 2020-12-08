@@ -97,7 +97,9 @@ def detection_loop(filename_image, path, output):
   #make output.txt for results of the inference and make it accessible
   os.system("touch "+ path + "results/output.txt")
   #os.system("sudo chmod 777 ./results/output.txt")
-
+  
+  no_files = len(filename_image)
+  
   for filename, image in filename_image.items():
       #image = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
       #image = Image.fromarray(image)
@@ -147,8 +149,9 @@ def detection_loop(filename_image, path, output):
               #spliting filename from extension
               split_filename = filename.split(".", 1)
               image.save(path+"results/"+split_filename[0]+"-annnotated.png", format='PNG')
-
-  print ('%.7f' % (summ / 100))
+  print("The average inference time over "+str(no_files)+" image files is:")
+  print ('%.7fms' % (summ / no_files))
+#  print ('%.7f' % (summ / 100))
 
 labelsPath = "models/coco_labels.txt"
 modelPath = "models/mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite"
