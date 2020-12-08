@@ -38,4 +38,5 @@ This work has been partially funded through the Rucon project (Runtime Control i
 
 ## REFERENCES 
 [1] L. Wang, J. Shi, G. Song, and I.-F. Shen, “Object detection combining recognition and segmentation,” in Asian conference on computer vision. Springer, 2007, pp. 189–199.
+
 [2] J.-P. Jodoin, G.-A. Bilodeau, and N. Saunier, “Urban tracker: Multiple object tracking in urban mixed traffic,” in IEEE Winter Conference on Applications of Computer Vision. IEEE, 2014, pp. 885–892.
