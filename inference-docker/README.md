@@ -28,3 +28,14 @@ curl http://localhost:5000/api/detect -d "input=/data/samples/06.jpg&output=1"
 curl http://localhost:5000/api/detect -d "input=/data/samples/&output=1"
 ~~~
 2b. Deploy inference on Kubernetes
+~~~
+#pay attention to a specified docker image and other details in the manifest file inference.yaml
+kubectl apply -f inference.yaml
+
+#test inference by submiting image(s) path from "outside". We can pass data in cURL by using -d to send requested values. Considering the manifest file, hostPath as a Volume is used to mount a specific data folder from the host), enabling object detection to access image data(set) from the passed values (input data path)
+kubectl exec inference-notpu -- curl http://localhost:5000/api/detect -d "input=/data/samples/06.jpg" 
+
+#access container in a pod
+kubectl exec --stdin --tty inference-notpu -- /bin/bash
+~~~
+3. The output data, i.e., the .txt file with detected objects and scores as well as (if requested) annotated images, can be find in the same folder (whose path is specified as the input)
