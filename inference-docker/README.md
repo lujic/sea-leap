@@ -32,7 +32,8 @@ curl http://localhost:5000/api/detect -d "input=/data/samples/&output=1"
 #pay attention to a specified docker image and other details in the manifest file inference.yaml
 kubectl apply -f inference.yaml
 
-#test inference by submiting image(s) path from "outside". We can pass data in cURL by using -d to send requested values. Considering the manifest file, hostPath as a Volume is used to mount a specific data folder from the host), enabling object detection to access image data(set) from the passed values (input data path)
+#test inference by submiting image(s) path from "outside". We can pass data in cURL by using -d to send requested values. 
+#Considering the manifest file, hostPath as a Volume is used to mount a specific folder from the host), enabling inference to access image data(set) from the passed values (input)
 kubectl exec inference-notpu -- curl http://localhost:5000/api/detect -d "input=/data/samples/06.jpg" 
 
 #access container in a pod
