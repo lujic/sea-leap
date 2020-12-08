@@ -9,7 +9,7 @@ docker build -t inference-at-arm32v7-slim-buster:edgetpu-v2 .
 #without tpu
 docker build -t inference-at-arm32v7-slim-buster:notpu-v2 .
 ~~~
-2.a Run docker container locally
+2a. Run docker container locally
 ~~~
 #docker image with tpu (allowing to access tpu)
 docker run -d -p 5000:5000 --privileged -v /dev/bus/usb:/dev/bus/usb inference-at-arm32v7-slim-buster:edgetpu-v2
@@ -27,4 +27,4 @@ curl http://localhost:5000/api/detect -d "input=/data/samples/"
 curl http://localhost:5000/api/detect -d "input=/data/samples/06.jpg&output=1"
 curl http://localhost:5000/api/detect -d "input=/data/samples/&output=1"
 ~~~
-2.b Deploy inference on Kubernetes
+2b. Deploy inference on Kubernetes
