@@ -8,4 +8,4 @@ python3 app.py
 ~~~
 curl http://localhost:5000/api/detect -d "input=/data/samples/"
 ~~~
-* obtain results of average inference per image frame for target edge node type
+* obtain results of average inference per image frame for target edge node type 
