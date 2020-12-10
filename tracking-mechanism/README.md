@@ -1,6 +1,6 @@
 ## Prerequisite for the meta scheduler and placement service
 
-* Setting up postgresql docker container
+* Setting up postgres docker container
 ~~~~
 docker pull postgres:10
 docker run --name metadata -e POSTGRES_PASSWORD=sealeapmetadata -p 5432:5432 -d postgres:10
