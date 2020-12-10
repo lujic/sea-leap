@@ -14,7 +14,7 @@ This repository includes the following elements/services:
 
 - **inference-benchmark** - aims to obtain inference latency benchmarks for different (RPi) node types. 
 - **inference-docker** - contains source files to build docker images for the object detection logic. 
-- **placementServiceSimulation.py** - simulates the calculattion of the most appropriate node location for a set of configurable information: datasets, edge node specifications, analytics types,  network topology and characteristics. 
+- **placementServiceSimulation.py** - simulates the calculation of the most appropriate location for a set of configurable information: dataset, edge node specifications, analytics, network topology and characteristics. 
 
 *******************************************************************
 
