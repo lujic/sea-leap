@@ -7,12 +7,6 @@ class nodeSpec:
         self.nodeType = nodeType
         self.avgInference = avgInference
  
-class networkSpec:
-    def __init__(self, networkType, avgLatency, avgBandwidth):
-        self.networkType = networkType
-        self.avgLatency = avgLatency
-        self.avgBandwidth = avgBandwidth
-
 class candidateSpec:
     def __init__(self, nodeName, edgeSite, nodeType, totalLatency):
         self.nodeName = nodeName
@@ -52,7 +46,6 @@ networkHops = pd.DataFrame(matrix, columns=column_names, index=row_names)
 # creating lists
 locationCandidates = list()
 L_ap = list()
-networkBenchmarks = list()
 nodeBenchmarks = list()
 initCandidates = list()
 newCandidates = list()
@@ -63,11 +56,6 @@ index = None
 nodeBenchmarks.append( nodeSpec('A', '0.01781') )
 nodeBenchmarks.append( nodeSpec('B', '0.25074') )
 nodeBenchmarks.append( nodeSpec('C', '0.50062') )
-
-
-#networkBenchmarks.append( networkSpec('3G', '0.24792', '19.02') )
-#networkBenchmarks.append( networkSpec('4G', '0.02344', '48.11') )
-#networkBenchmarks.append( networkSpec('5G', '0.01383', '116') )
 
 # initial location candidates considering dataset location
 initCandidates.append( initNodesSpec('rll-m01', 'rll-mozart') )
@@ -101,9 +89,6 @@ networkDict = [
         ['5G', '0.01383', '66.55']
         ]
 
-# creating df object with columns specified     
-#nodes_df = pd.DataFrame(nodeDict, columns =['nodeName', 'edgeSite', 'nodeType'])  
-
 #------------------------------------
 
 datasetMetadata = ['cam-intra-09072020d1', '91.4', '600'] 
@@ -111,19 +96,6 @@ datasetMetadata = ['cam-intra-09072020d1', '91.4', '600']
 #datasetMetadata = ['cam-sher-09072020d3', '154', '1800']
 #datasetMetadata = ['cam-rene-09072020d4', '1011.8', '3600']
 
-
-#for node in nodeDict:
- #print(node[0])
-#print (datasetLocations[2].location)
-#if (datasetLocations[0].datasetID == userDataset)
-#for obj in networkHops['E1']:
-#    print (obj)
-#for obj in locationCandidates:
-    #if (obj.datasetID ==  userDataset):
-        #index = datasetLocations.index(obj)
-#    print (obj.nodeName)
-    
-#print (locationCandidates[0].nodeName)
 
 for node_init in initCandidates: 
     #retrieve corresponding edgeSite and nodeType of initial nodes
@@ -165,8 +137,8 @@ for node_init in initCandidates:
             #print(no_hops)
             size_d = float(datasetMetadata[1])
             #latency and bandwidth can be checked for different benchmarked configurations (first element): 0->3G, 1->4G, 2->5G 
-            lat = float(networkDict[0][1])
-            bw = float(networkDict[0][2]) / 8
+            lat = float(networkDict[2][1])
+            bw = float(networkDict[2][2]) / 8
             T_MV = round((lat + no_hops * (size_d/bw)), 5)
             #print(size_d)
             #print(lat)
@@ -177,10 +149,11 @@ for node_init in initCandidates:
 
 L_ap.append(locationCandidates[0])
 #print(L_ap[0].totalLatency)
-print("Location candidates are the following:")
+print("Location candidates to run inference on dataset " + str(datasetMetadata[0]) + " are the following:")
+print("-------------")
 for cand in locationCandidates:
     print (cand.nodeName, cand.edgeSite, cand.nodeType, cand.totalLatency)
     if (cand.totalLatency < L_ap[0].totalLatency):
         L_ap[0] = cand
-
+print("-------------")
 print ("\nThe most appropriate node location is " + str(L_ap[0].nodeName) + " from cluster " + str(L_ap[0].edgeSite) + " with minimum estimated latency of " + str(L_ap[0].totalLatency) + "s")
