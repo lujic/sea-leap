@@ -2,7 +2,7 @@ import os
 import socket
 import psycopg2
 
-#name of the current node
+#name of the current Node host
 HOST = "rll-m02"
 #name of the edge site/cluster
 EDGE_SITE = "E1"
