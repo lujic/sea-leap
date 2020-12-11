@@ -15,7 +15,7 @@ psql -h localhost -U postgres
 postgres=# \dt
 postgres=# SELECT * FROM meta_db;
 ~~~~
-* retrieving metadata from postgres test
+* retrieving metadata from postgres - test
 ~~~~
 python3 retrieveMetadata.py
 ~~~~
