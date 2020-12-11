@@ -15,7 +15,17 @@ psql -h localhost -U postgres
 postgres=# \dt
 postgres=# SELECT * FROM meta_db;
 ~~~~
-* retrieving metadata from postgres - test
+* retrieving metadata from postgres - TEST
 ~~~~
 python3 retrieveMetadata.py
+~~~~
+* data movement tracking - TEST
+~~~~
+#run agent-m02.py from target node that will execute request for data management action
+python3 agent-m02.py
+
+#run migrate-data.py from meta-server (or other node) requesting data management action
+python3 migrate-data.py
+
+#check new location details in the metadata database
 ~~~~
