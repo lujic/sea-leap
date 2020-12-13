@@ -15,6 +15,8 @@ This repository includes the following elements/services:
 - **inference-benchmark** - aims to obtain inference latency benchmarks for different (RPi) node types. 
 - **inference-docker** - contains source files to build docker images for the object detection logic. 
 - **placementServiceSimulation.py** - simulates the calculation of the most appropriate location for a set of configurable information: dataset, edge node specifications, analytics, network topology and characteristics. 
+- **tracking-mechnaism** - aims to build agent monitoring services and metadata-database for registration and tracking of data movements. 
+- **meta-scheduler** - aims to self-adaptively guide the placement of requested analytics processing based on data locality. 
 
 *******************************************************************
 
