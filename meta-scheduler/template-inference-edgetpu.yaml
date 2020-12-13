@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inference-edgetpu
+  labels:
+    name: inference-edgetpu
+spec:
+  containers:
+  - name: inference
+    image: ilujic/inference-arm32v7:edgetpu-v2-slim-buster
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 5000
+    volumeMounts:
+    - mountPath: /data
+      name: input-data
+    - mountPath: /dev/bus/usb
+      name: dev-bus
+    securityContext:
+      privileged: true
+  volumes:
+  - name: input-data
+    hostPath:
+      path: /data
+      type: Directory
+  - name: dev-bus
+    hostPath:
+      path: /dev/bus/usb
+      type: Directory

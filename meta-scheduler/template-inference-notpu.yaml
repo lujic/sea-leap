@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inference-notpu
+  labels:
+    name: inference-notpu
+spec:
+  containers:
+  - name: inference
+    image: ilujic/inference-arm32v7:notpu-v2-slim-buster
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 5000
+    volumeMounts:
+    - mountPath: /data
+      name: input-data
+  volumes:
+  - name: input-data
+    hostPath:
+      path: /data
+      type: Directory
