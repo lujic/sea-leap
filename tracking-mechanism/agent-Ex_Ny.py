@@ -42,7 +42,7 @@ try:
             print(file_name)
 
             passw= "rucon2020"
-            fetch = "sshpass -r " + passw + " scp -r " + file_location + ":/home/pi/datasets/" + file_name + " /data/samples"
+            fetch = "sshpass -p " + passw + " scp -r " + file_location + ":/home/pi/datasets/" + file_name + " /data/samples"
             
             print (str(fetch))
             os.system(fetch)
