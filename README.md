@@ -22,7 +22,7 @@ This repository includes the following elements/services:
 
 ## TESTBED
 The simulation-based evaluation is based on a physical edge infrastructure consisted of Raspberry Pi (RPi) single-board computers available in different configurations (RPi 3 B+, RPi 4, with and without edge TPU - Coral USB accelerator).
-<img src="https://github.com/lujic/sea-leap/blob/main/sea-leap-testbed.jpg" width="100" height="100">
+<img src="https://github.com/lujic/sea-leap/blob/main/sea-leap-testbed.jpg" width="200">
 
 ## DATA
 The proposed algorithms are evaluated on different real-world datasets (typically used in computer vision analytics applications such as object detection), namely:
