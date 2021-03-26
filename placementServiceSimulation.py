@@ -66,7 +66,7 @@ newCandidates.append( newNodesSpec('rll-b01', 'E3', 'C') )
 newCandidates.append( newNodesSpec('rll-intrabox01', 'E4', 'B') )
 newCandidates.append( newNodesSpec('rll-intrabox02', 'E5', 'A') )
 
-# node dictionary stored in the Knowledge base; can be extended with new edge nodes
+#node dictionary stored in the Knowledge base; can be extended with new edge nodes
 nodeDict =[
         ['rll-m01', 'E1', 'C'], 
         ['rll-m02', 'E1', 'C'],  
@@ -82,7 +82,7 @@ nodeDict =[
         ['rll-intrabox02', 'E5', 'A']
         ]  
 
-# network details stored in the Knowledge base; can be extended for  each edge site 
+#network details stored in the Knowledge base (KB); can be extended for  each edge site 
 networkDict = [
         ['3G', '0.24792', '8.81'],
         ['4G', '0.02344', '41.43'],
