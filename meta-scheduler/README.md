@@ -1,6 +1,6 @@
 ## Steps for running meta scheduler with other SEA-LEAP services
 
-* testing meta scheduler with only guideMe action (i.e., run analytics request at the node location storing requested dataset)
+* test meta scheduler with only guideMe action (i.e., run analytics request at the node location storing requested dataset)
 ~~~~
 #run meta-sched-guideme-only.py on "meta server"
 python3 meta-sched-guideme-only.py
