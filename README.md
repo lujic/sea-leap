@@ -23,7 +23,7 @@ This repository includes the following elements/services:
 ## TESTBED
 The simulation-based evaluation is based on a physical edge infrastructure consisted of Raspberry Pi (RPi) single-board computers available in different configurations (RPi 3 B+, RPi 4, with and without edge TPU - Coral USB accelerator).
 <p align="center">
-  <br/><img src="https://github.com/lujic/sea-leap/blob/main/sea-leap-testbed.jpg" width="400">
+  <br/><img src="https://github.com/lujic/sea-leap/blob/main/sea-leap-testbed-configuration.JPG" width="400">
 </p>
 
 ## DATA
