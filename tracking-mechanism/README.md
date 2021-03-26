@@ -24,7 +24,7 @@ python3 retrieveMetadata.py
 #run agent-Ex_Ny.py from target edge site Ex and node Ny that will execute request for data management action
 python3 agent-Ex_Ny.py
 
-#run migrate-data.py from meta-server (or other nodes) requesting data management action
+#run migrate-data.py from edge meta-server (or other nodes) requesting data management action
 python3 migrate-data.py
 
 #check new location details in the metadata database
