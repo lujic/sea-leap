@@ -14,9 +14,9 @@ This repository includes the following elements/services:
 
 - **inference-benchmark** - aims to obtain inference latency benchmarks for different (RPi) node types. 
 - **inference-docker** - contains source files to build docker images for the object detection logic. 
-- **placementServiceSimulation.py** - simulates the calculation of the most appropriate location for a set of configurable information: dataset, edge node specifications, analytics, network topology and characteristics. 
+- **placementServiceSimulation.py** - simulates the calculation of the most appropriate node location considering a set of configurable information: dataset, edge node specifications, analytics, network topology and characteristics. 
 - **tracking-mechnaism** - aims to build agent monitoring services and metadata-database for registration and tracking of data movements. 
-- **meta-scheduler** - aims to self-adaptively guide the placement of requested analytics processing based on data locality; represents the complete SEA-LEAP workflow integrating the aforementioned services.
+- **meta-scheduler** - aims to self-adaptively guide the placement of analytics requests based on data locality; represents the complete SEA-LEAP workflow integrating the aforementioned services.
 
 *******************************************************************
 
@@ -26,12 +26,11 @@ The simulation-based evaluation is based on a physical edge infrastructure consi
   <br/><img src="https://github.com/lujic/sea-leap/blob/main/sea-leap-testbed.jpg" width="400">
 </p>
 
-
 ## DATA
 The proposed algorithms are evaluated on different real-world datasets (typically used in computer vision analytics applications such as object detection), namely:
 * InTraSafEd 5G project (https://newsroom.magenta.at/2020/01/16/5g-anwendungen-in-wien/) for increasing traffic safety with Edge and 5G, obtained during the project evaluation. The datasets contain sampled video frames in various sizes from the chosen Vienna’s intersection used for the real-time detection of critical situations
 and to support drivers in avoiding accidents (due to objects that can appear in drivers’ blind spots).
-* Dataset Penn-Fudan comes from an image database used for object detection and recognition on scenes around campuses and urban streets [1]. Selected frames represent various angles and image qualities of captured objects such as pedestrians, bikes and cars.
+* Dataset Penn-Fudan comes from an image database used for object detection and recognition on scenes around campuses and urban streets [1]. Selected frames represent various angles and image qualities of captured objects such as pedestrians, bikes, and cars.
 * Datasets Sherbrooke and Rene-Levesque come from the cameras monitoring different intersections, used for detecting and tracking multiple objects of various types in outdoor
 urban traffic surveillance [2].
 
