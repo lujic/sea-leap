@@ -75,25 +75,25 @@ nodeBenchmarks.append( nodeSpec('C', '0.50062') )
 #networkBenchmarks.append( networkSpec('5G', '0.01383', '116') )
 
 #alternative location candidates retrieved from the Knowledge base
-newCandidates.append( newNodesSpec('rll-h01', 'E2', 'C', 'rll-haydn', '192.168.167.101') )
-newCandidates.append( newNodesSpec('rll-b01', 'E3', 'C', 'rll-beethoven', '192.168.167.171') )
-newCandidates.append( newNodesSpec('intrabox01', 'E4', 'B', 'rll-intrabox01', '192.168.167.150') )
-newCandidates.append( newNodesSpec('intrabox02', 'E5', 'A', 'rll-intrabox02', '192.168.167.160') )
+newCandidates.append( newNodesSpec('rll-h01', 'E2', 'C', 'rll-haydn', '') )
+newCandidates.append( newNodesSpec('rll-b01', 'E3', 'C', 'rll-beethoven', '') )
+newCandidates.append( newNodesSpec('intrabox01', 'E4', 'B', 'rll-intrabox01', '') )
+newCandidates.append( newNodesSpec('intrabox02', 'E5', 'A', 'rll-intrabox02', '') )
 
 # node dictionary stored in the Knowledge base; can be extended with new edge nodes
 nodeDict =[
-        ['rll-m01', 'E1', 'C', '192.168.167.121'], 
-        ['rll-m02', 'E1', 'C', '192.168.167.122'],  
-        ['rll-m03', 'E1', 'C', '192.168.167.123'],
-        ['rll-mozart', 'E1', 'C', '192.168.167.120'],
-        ['rll-h01', 'E2', 'C', '192.168.167.101'],
-        ['rll-h02', 'E2', 'C', '192.168.167.102'],
-        ['rll-h03', 'E2', 'C', '192.168.167.103'],
-        ['rll-haydn', 'E2', 'C', '192.168.167.100'],
-        ['rll-b01', 'E3', 'C', '192.168.167.171'],
-        ['rll-beethoven', 'E3', 'C', '192.168.167.170'],
-        ['intrabox01', 'E4', 'B', '192.168.167.150'],
-        ['intrabox02', 'E5', 'A', '192.168.167.160']
+        ['rll-m01', 'E1', 'C', '<IP>'], 
+        ['rll-m02', 'E1', 'C', ''],  
+        ['rll-m03', 'E1', 'C', ''],
+        ['rll-mozart', 'E1', 'C', ''],
+        ['rll-h01', 'E2', 'C', ''],
+        ['rll-h02', 'E2', 'C', ''],
+        ['rll-h03', 'E2', 'C', ''],
+        ['rll-haydn', 'E2', 'C', ''],
+        ['rll-b01', 'E3', 'C', ''],
+        ['rll-beethoven', 'E3', 'C', ''],
+        ['intrabox01', 'E4', 'B', ''],
+        ['intrabox02', 'E5', 'A', '']
         ]  
 
 # network details stored in the Knowledge base; can be extended for  each edge site 
