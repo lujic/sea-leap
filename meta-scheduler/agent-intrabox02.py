@@ -43,14 +43,14 @@ try:
             print(file_location)
             print(file_name)
 
-            passw= "rucon2020"
+            passw= ""
             fetch = "sshpass -p " + passw + " scp -r " + file_location + ":/home/pi/datasets/" + file_name + " /data/samples"
             
             print (str(fetch))
             os.system(fetch)
             
             # update metadata
-            con = psycopg2.connect(database="postgres", user="postgres", password="rucon2020", host="192.168.167.140", port="5432")
+            con = psycopg2.connect(database="postgres", user="postgres", password="", host="", port="5432")
             print ("Database opened successfully")
 
             cur = con.cursor()
