@@ -4,7 +4,7 @@ import socket
 
 def migrate(host_ip, src_ip, datasetid):
 
-    #TCP_IP = '192.168.167.160'
+    #TCP_IP = ''
     TCP_IP = host_ip
     TCP_PORT = 5122
     BUFFER_SIZE = 1024
