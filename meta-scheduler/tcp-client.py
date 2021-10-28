@@ -3,7 +3,7 @@
 import socket
 
 
-TCP_IP = '192.168.167.140'
+TCP_IP = ''
 TCP_PORT = 5001
 BUFFER_SIZE = 1024
 MESSAGE = "cam-pennfudan-31Dec20 inference-v1"
